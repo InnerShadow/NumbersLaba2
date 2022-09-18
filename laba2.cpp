@@ -31,7 +31,7 @@ double CountDelta2(XVector x, XVector prev){
 
     for (int i = 0; i < x.size(); i++){
         if (std::abs(prev.at(i)) < 1){
-            if (abs(prev.at(i) - x.at(i)) > max){
+            if (std::abs(prev.at(i) - x.at(i)) > max){
                 max = std::abs(prev.at(i) - x.at(i));
             }
         } else {
