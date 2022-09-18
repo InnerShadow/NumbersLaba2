@@ -55,7 +55,7 @@ void DoTaskInPropertyOfM(double M){
     double delta1 = 1;
     double delta2 = 1;
     int counter = 0;
-    XVector Discrepancy(2);  //F
+    XVector Discrepancy(2);
 
     printf("%25s%25s%25s", "counter", "delta1", "delta2\n");
     while(delta1 > EPSILON1 || delta2 > EPSILON2){
@@ -83,8 +83,6 @@ void DoTaskInPropertyOfM(double M){
             std::cout << "IER = 2\n";
             return;
         }
-        
-        // Solution.Print();
 
     }
 
