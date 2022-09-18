@@ -5,9 +5,8 @@
 #include "Xvector.hpp"
 #include "JacobiMatrix.hpp"
 
-#define EPSILON1 10e-9
-#define EPSILON2 10e-9
-#define KNIT  100
+#define EPSILON 10e-9
+#define KNIT 100
 
 // Task 9
 
@@ -46,7 +45,7 @@ double CountDelta2(XVector x, XVector prev){
 }
 
 void DoTaskInPropertyOfM(double M){
-    printf("%42s%f\n", "M == ", M);
+    printf("\n%42s%f\n", "M == ", M);
     JacobiMatrix Jacobi(2, equation1, equation2);
 
     XVector Solution(2);
@@ -59,7 +58,7 @@ void DoTaskInPropertyOfM(double M){
     XVector Discrepancy(2);
 
     printf("%25s%25s%25s", "counter", "delta1", "delta2\n");
-    while(delta1 > EPSILON1 || delta2 > EPSILON2){
+    while(delta1 > EPSILON || delta2 > EPSILON){
         Discrepancy.ReCountDiscrepancyVector(Solution);
         Jacobi.RecountJacobiMatrix(Solution, M);
 
