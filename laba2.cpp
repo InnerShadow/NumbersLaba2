@@ -46,6 +46,7 @@ double CountDelta2(XVector x, XVector prev){
 }
 
 void DoTaskInPropertyOfM(double M){
+    printf("%42s%f\n", "M == ", M);
     JacobiMatrix Jacobi(2, equation1, equation2);
 
     XVector Solution(2);
@@ -95,11 +96,11 @@ void DoTaskInPropertyOfM(double M){
 }
 
 int main(void){
-    printf("%45s\n", "M == 0.1");
     DoTaskInPropertyOfM(0.1);
-    printf("\n%45s\n", "M == 0.05");
+
     DoTaskInPropertyOfM(0.05);
-    printf("\n%45s\n", "M == 0.01");
+
     DoTaskInPropertyOfM(0.01);
+
     return 0;
 }
